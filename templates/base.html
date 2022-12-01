@@ -1,0 +1,113 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <title>Django Social Network Toolkit</title>
+
+    {% include 'includes/stylesheets.html' %}
+    {% csrf_token %}
+
+</head>
+<body class="page-has-left-panels page-has-right-panels">
+<!-- Fixed Sidebar Left -->
+
+<div class="fixed-sidebar">
+    <div class="fixed-sidebar-left sidebar--small" id="sidebar-left">
+
+        <a href="" class="logo">
+            <div class="img-wrap">
+                <img src="{% static 'img/logo.webp' %}" alt="Olympus">
+            </div>
+        </a>
+
+        <div class="mCustomScrollbar" data-mcs-theme="dark">
+            <ul class="left-menu">
+                <li>
+                    <a href="#" class="js-sidebar-open">
+                        <svg class="olymp-menu-icon left-menu-icon" data-toggle="tooltip" data-placement="right"
+                             data-original-title="OPEN MENU">
+                            <use xlink:href="svg-icons/sprites/icons.svg#olymp-menu-icon"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <svg class="olymp-newsfeed-icon left-menu-icon" data-toggle="tooltip" data-placement="right"
+                             data-original-title="NEWSFEED">
+                            <use xlink:href="svg-icons/sprites/icons.svg#olymp-newsfeed-icon"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <svg class="olymp-manage-widgets-icon left-menu-icon" data-toggle="tooltip"
+                             data-placement="right"
+                             data-original-title="Manage Widgets">
+                            <use xlink:href="svg-icons/sprites/icons.svg#olymp-manage-widgets-icon"></use>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="fixed-sidebar-left sidebar--large" id="sidebar-left-1">
+        <a href="" class="logo">
+            <div class="img-wrap">
+                <img src="{% static 'img/logo.webp' %}" alt="Olympus">
+            </div>
+            <div class="title-block">
+                <h6 class="logo-title">Social</h6>
+            </div>
+        </a>
+
+        <div class="mCustomScrollbar" data-mcs-theme="dark">
+            <ul class="left-menu">
+                <li>
+                    <a href="#" class="js-sidebar-open">
+                        <svg class="olymp-close-icon left-menu-icon">
+                            <use xlink:href="svg-icons/sprites/icons.svg#olymp-close-icon"></use>
+                        </svg>
+                        <span class="left-menu-title">Collapse Menu</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="03-Newsfeed.html">
+                        <svg class="olymp-newsfeed-icon left-menu-icon" data-toggle="tooltip" data-placement="right"
+                             data-original-title="NEWSFEED">
+                            <use xlink:href="svg-icons/sprites/icons.svg#olymp-newsfeed-icon"></use>
+                        </svg>
+                        <span class="left-menu-title">Newsfeed</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <svg class="olymp-manage-widgets-icon left-menu-icon" data-toggle="tooltip"
+                             data-placement="right"
+                             data-original-title="Manage Widgets">
+                            <use xlink:href="svg-icons/sprites/icons.svg#olymp-manage-widgets-icon"></use>
+                        </svg>
+                        <span class="left-menu-title">Manage Widgets</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- ... end Fixed Sidebar Left -->
+
+{% include 'includes/header.html' %}
+
+{% block content %} {% endblock %}
+
+{% include 'includes/scripts.html' %}
+{% block scripts %}{% endblock %}
+
+</body>
+</html>
